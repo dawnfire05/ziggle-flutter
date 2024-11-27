@@ -66,6 +66,8 @@
     "manage": {
       "header": "그룹 관리",
       "back": "돌아가기",
+      "deleteConfirmationTitle": "정말 그룹을 삭제하시겠습니까?",
+      "deleteConfirmationMessage": "기존에 본 그룹 명의로 작성된 공지에는 영향을 끼치지 않습니다.",
       "change": "변경",
       "profileImage": "그룹 프로필 사진 변경",
       "name": {

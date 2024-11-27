@@ -66,6 +66,8 @@
     "manage": {
       "header": "グループ管理",
       "back": "戻る",
+      "deleteConfirmationTitle": "グループを削除してもよろしいですか？",
+      "deleteConfirmationMessage": "このグループ名で投稿された以前の通知には影響しません。",
       "change": "変更",
       "profileImage": "グループのプロフィール写真を変更",
       "name": {
