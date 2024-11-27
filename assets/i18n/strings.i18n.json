@@ -68,6 +68,8 @@
       "back": "Back",
       "deleteConfirmationTitle": "Are you sure you want to delete the group?",
       "deleteConfirmationMessage": "This will not affect the notices previously posted under this group name.",
+      "leaveConfirmationTitle": "Are you sure you want to leave the group?",
+      "leaveConfirmationMessage": "This will not affect the notices previously posted under this group name.",
       "change": "Change",
       "profileImage": "Change Group Profile Image",
       "name": {
