@@ -87,7 +87,8 @@
       },
       "invite": {
         "header": "Generate Invite Link",
-        "invitationLink": "Invitation Link"
+        "invitationLink": "Invitation Link",
+        "copy": "Copy invitation link"
       },
       "member": {
         "header": "Manage Members"

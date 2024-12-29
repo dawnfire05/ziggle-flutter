@@ -87,7 +87,8 @@
       },
       "invite": {
         "header": "초대 링크 생성",
-        "invitationLink": "초대 링크"
+        "invitationLink": "초대 링크",
+        "copy": "초대 링크 복사하기"
       },
       "member": {
         "header": "멤버 관리"

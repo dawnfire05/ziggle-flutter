@@ -87,7 +87,8 @@
       },
       "invite": {
         "header": "招待リンクを生成",
-        "invitationLink": "招待リンク"
+        "invitationLink": "招待リンク",
+        "copy": "招待リンクをコピー"
       },
       "member": {
         "header": "メンバーを管理"
