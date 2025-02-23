@@ -95,9 +95,7 @@ class _Layout extends StatelessWidget {
                               name: groups.list[index].name,
                               onPressed: () {
                                 context.router.push(
-                                  GroupManagementShellRoute(
-                                    group: groups.list[index],
-                                  ),
+                                  GroupDetailRoute(),
                                 );
                               },
                             );
