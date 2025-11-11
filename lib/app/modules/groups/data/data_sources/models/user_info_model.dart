@@ -1,11 +1,14 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:ziggle/app/modules/groups/data/data_sources/models/user_info_role_model.dart';
+import 'package:ziggle/app/modules/groups/domain/entities/user_info_entity.dart';
 
 part 'user_info_model.freezed.dart';
 part 'user_info_model.g.dart';
 
 @freezed
-sealed class UserInfoModel with _$UserInfoModel {
+sealed class UserInfoModel with _$UserInfoModel implements UserInfoEntity {
+  const UserInfoModel._();
+
   const factory UserInfoModel({
     required UserInfoRoleModel role,
     required String name,

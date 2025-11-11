@@ -6,6 +6,7 @@ import 'package:ziggle/app/modules/groups/data/data_sources/models/create_group_
 import 'package:ziggle/app/modules/groups/data/data_sources/models/group_list_model.dart';
 import 'package:ziggle/app/modules/groups/data/data_sources/models/modify_group_model.dart';
 import 'package:ziggle/app/modules/groups/data/data_sources/remote/group_api.dart';
+import 'package:ziggle/app/modules/groups/data/data_sources/remote/third_party_api.dart';
 import 'package:ziggle/app/modules/groups/data/enums/group_member_role.dart';
 import 'package:ziggle/app/modules/groups/domain/entities/authority_entity.dart';
 import 'package:ziggle/app/modules/groups/domain/entities/group_entity.dart';
@@ -13,16 +14,18 @@ import 'package:ziggle/app/modules/groups/domain/entities/group_list_entity.dart
 import 'package:ziggle/app/modules/groups/domain/entities/member_list_entity.dart';
 import 'package:ziggle/app/modules/groups/domain/entities/role_entity.dart';
 import 'package:ziggle/app/modules/groups/domain/entities/role_list_entity.dart';
+import 'package:ziggle/app/modules/groups/domain/entities/user_info_entity.dart';
 import 'package:ziggle/app/modules/groups/domain/repository/group_repository.dart';
 import 'package:ziggle/app/values/strings.dart';
 
 @Singleton(as: GroupRepository)
 class RestGroupRepository implements GroupRepository {
   final GroupApi _api;
+  final ThirdPartyApi _thirdPartyApi;
   final BehaviorSubject<GroupListEntity> _groupsSubject =
       BehaviorSubject.seeded(GroupListEntity(list: []));
 
-  RestGroupRepository(this._api);
+  RestGroupRepository(this._api, this._thirdPartyApi);
 
   @override
   Future<GroupListEntity> getGroups() async {
@@ -173,5 +176,11 @@ class RestGroupRepository implements GroupRepository {
   @override
   Future<void> deleteRole(String groupUuid, int roleId) {
     throw UnimplementedError();
+  }
+
+  @override
+  Future<UserInfoEntity> getUserInfo() async {
+    final userInfo = await _thirdPartyApi.userinfo();
+    return userInfo;
   }
 }

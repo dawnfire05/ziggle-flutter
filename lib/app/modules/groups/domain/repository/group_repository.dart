@@ -7,6 +7,7 @@ import 'package:ziggle/app/modules/groups/domain/entities/group_list_entity.dart
 import 'package:ziggle/app/modules/groups/domain/entities/member_list_entity.dart';
 import 'package:ziggle/app/modules/groups/domain/entities/role_entity.dart';
 import 'package:ziggle/app/modules/groups/domain/entities/role_list_entity.dart';
+import 'package:ziggle/app/modules/groups/domain/entities/user_info_entity.dart';
 
 abstract class GroupRepository {
   Future<GroupListEntity> getGroups();
@@ -53,4 +54,5 @@ abstract class GroupRepository {
   );
   Future<void> deleteRole(String groupUuid, int roleId);
   Future<bool> checkGroupExistence(String name);
+  Future<UserInfoEntity> getUserInfo();
 }

@@ -1,11 +1,16 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:ziggle/app/modules/groups/data/data_sources/models/external_permission_model.dart';
+import 'package:ziggle/app/modules/groups/domain/entities/user_info_role_entity.dart';
 
 part 'user_info_role_model.freezed.dart';
 part 'user_info_role_model.g.dart';
 
 @freezed
-sealed class UserInfoRoleModel with _$UserInfoRoleModel {
+sealed class UserInfoRoleModel
+    with _$UserInfoRoleModel
+    implements UserInfoRoleEntity {
+  const UserInfoRoleModel._();
+
   const factory UserInfoRoleModel({
     required List<ExternalPermissionModel> externalPermissions,
     required String name,
